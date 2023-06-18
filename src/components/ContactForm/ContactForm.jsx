@@ -5,7 +5,7 @@ import { nanoid } from 'nanoid';
 import { AddBtn, Form, Input, FormName } from './ContactForm.styled';
 
 import { useDispatch, useSelector } from 'react-redux';
-import { addContact } from 'redux/ContactsSlice';
+import { addContacts } from 'services/fetchApi';
 import { getContacts } from 'redux/Selectors';
 
 export const ContactForm = () => {
@@ -42,7 +42,7 @@ export const ContactForm = () => {
       return;
     }
 
-    dispatch(addContact(contact));
+    dispatch(addContacts(contact));
     resetForm();
   };
 
