@@ -9,3 +9,5 @@ export const getFilteredUser = state => {
 };
 
 export const getLoader = state => state.contacts.isLoading;
+
+
