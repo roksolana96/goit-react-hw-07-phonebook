@@ -5,7 +5,7 @@ import { ContactForm } from './ContactForm/ContactForm';
 import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { fetchContacts } from 'services/fetchApi';
-import { InfinitySpin } from 'react-loader-spinner';
+import Loader from './Loader/Loader';
 import { getLoader } from 'redux/Selectors';
 
 export const App = () => {
@@ -31,8 +31,8 @@ export const App = () => {
               alignItems: 'center',
             }}
           >
-            <InfinitySpin width="400" color="#4c2ef7" />
-          </div>
+          <Loader />        
+      </div>
         )}
         <ContactList />
       </div>
