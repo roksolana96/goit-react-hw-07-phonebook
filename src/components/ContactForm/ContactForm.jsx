@@ -41,7 +41,7 @@ export const ContactForm = () => {
       alert(`${user.number} is already in contacts.`);
 
     } else if (contactUser.find(item => item.name.toLowerCase() === user.name.toLowerCase())) {
-      alert(`Already exists!`);
+      alert(`A contact with the name '${user.name}' already exists!`);
       return;
     }
 
