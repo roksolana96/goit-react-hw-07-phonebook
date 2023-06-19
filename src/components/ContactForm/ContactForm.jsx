@@ -34,14 +34,11 @@ export const ContactForm = () => {
       number: user.number,
     };
 
-    if (contactUser.find(item => item.name === user.name)) {
-      alert(`${user.name} is already in contacts.`);
+    if (contactUser.find(item => item.name.toLowerCase() === user.name.toLowerCase())) {
+      alert(`'${user.name}' is already in contacts.`);
       return;
     } else if (contactUser.find(item => item.number === user.number)) {
-      alert(`${user.number} is already in contacts.`);
-
-    } else if (contactUser.find(item => item.name.toLowerCase() === user.name.toLowerCase())) {
-      alert(`A contact with the name '${user.name}' already exists!`);
+      alert(`'${user.number}' is already in contacts.`);
       return;
     }
 
